@@ -27,40 +27,7 @@ namespace Searchify.Services
                 Console.WriteLine(docsArray[i].url);
             }
 
-
-            if (method == TriggerQuery.TriggerType.DELETE)
-            {
-                ReplaceData("blacklist.json", docs);   
-            }
-            else
-            {
-                ReplaceData("whitelist.json", docs);
-            }
         }
 
-        private static void ReplaceData<T>(string filepath, IEnumerable<T> data)
-        {
-            string newJsonString = string.Empty;
-            if (!File.Exists(filepath)) {
-                File.Create(filepath).Dispose();
-            }
-            using(StreamReader r = new StreamReader(filepath))
-            {
-                var json = r.ReadToEnd();
-                if (json.Length > 0)
-                {
-                    var oldJson = JsonSerializer.Deserialize<IEnumerable<T>>(json);
-                    var newJson = oldJson.ToArray().Concat<T>(data);
-                    newJsonString = JsonSerializer.Serialize(newJson);
-                }
-                else
-                {
-                    newJsonString = JsonSerializer.Serialize(data);
-                }
-                
-            
-            }
-            File.WriteAllText(filepath, newJsonString);
-        }
     }
 }
