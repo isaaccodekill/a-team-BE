@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj": {}
+    "/home/oluwafenyi/CSC-322 Assignments/a-team-BE/Searchify.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj": {
+    "/home/oluwafenyi/CSC-322 Assignments/a-team-BE/Searchify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj",
+        "projectUniqueName": "/home/oluwafenyi/CSC-322 Assignments/a-team-BE/Searchify.csproj",
         "projectName": "Searchify",
-        "projectPath": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj",
-        "packagesPath": "C:\\Users\\Isaac Bello\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\obj\\",
+        "projectPath": "/home/oluwafenyi/CSC-322 Assignments/a-team-BE/Searchify.csproj",
+        "packagesPath": "/home/oluwafenyi/.nuget/packages/",
+        "outputPath": "/home/oluwafenyi/CSC-322 Assignments/a-team-BE/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Isaac Bello\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/oluwafenyi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +35,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Cronos": {
               "target": "Package",
@@ -50,7 +48,7 @@
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[5.0.9, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -62,13 +60,19 @@
               "target": "Package",
               "version": "[5.0.9, )"
             },
-            "NpgSql.EntityFrameworkCore.PostgreSQL.Design": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.1.0, )"
+              "version": "[1.0.0, )",
+              "autoReferenced": true
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -101,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/current/sdk/5.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }
