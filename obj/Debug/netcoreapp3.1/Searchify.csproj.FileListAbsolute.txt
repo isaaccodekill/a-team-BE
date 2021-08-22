@@ -54,3 +54,10 @@ C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\System.Diagn
 C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\Searchify.xml
 C:\Users\Isaac Bello\source\repos\Searchify\obj\Debug\netcoreapp3.1\Searchify.xml
 C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Newtonsoft.dll
+C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\Devart.Data.dll
+C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\Devart.Data.PostgreSql.dll
+C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Isaac Bello\source\repos\Searchify\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
