@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searchify", "Searchify.csproj", "{62EE4A29-1F0D-4FB1-874C-F418189ACEA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchifyEngine", "..\SearchifyEngine\SearchifyEngine\SearchifyEngine.csproj", "{17AE55CC-91F5-41F8-9732-A348395E3565}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{62EE4A29-1F0D-4FB1-874C-F418189ACEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62EE4A29-1F0D-4FB1-874C-F418189ACEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62EE4A29-1F0D-4FB1-874C-F418189ACEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17AE55CC-91F5-41F8-9732-A348395E3565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17AE55CC-91F5-41F8-9732-A348395E3565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17AE55CC-91F5-41F8-9732-A348395E3565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17AE55CC-91F5-41F8-9732-A348395E3565}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
