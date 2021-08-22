@@ -36,7 +36,7 @@ namespace Searchify.Controllers
                     List<string> queryTokens =  Stopwords.Clean(parameters.query);
 
                     var data = searchifyContext.Suggestions.ToList().Where(s =>  Stopwords.compareQuery(queryTokens, s.query)).OrderBy(s => s.rank).ToList<Suggestions>();
-                    IEnumerable<string> strippedData = data.Select(s => s.query).Reverse();
+                    IEnumerable<string> strippedData = data.Select(s => Helpers.MarkSuggestions(queryTokens, s.query) ).Reverse().Take(5);
                     return Ok(new Response<IEnumerable<string>>(strippedData, "These are the generated queries"));
                 }
                 else
