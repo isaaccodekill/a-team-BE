@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Searchify.Domain.Models;
 using Searchify.Domain.Utils;
 using Searchify.Services;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace Searchify.Controllers
 {
@@ -15,10 +17,11 @@ namespace Searchify.Controllers
     public class SearchController : ControllerBase
     {
 
+        private readonly SearchifyContext searchifyContext;
         private readonly ILogger<SearchController> _logger;
-
-        public SearchController(ILogger<SearchController> logger)
+        public SearchController(SearchifyContext context, ILogger<SearchController> logger)
         {
+            searchifyContext = context;
             _logger = logger;
         }
 
@@ -27,16 +30,36 @@ namespace Searchify.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 if (parameters.autocomplete)
                 {
-                    return Ok(GenerateQueriesService.DisplayResults(parameters.query.ToString()));
+
+                    List<string> queryTokens =  Stopwords.Clean(parameters.query);
+
+                    var data = searchifyContext.Suggestions.ToList().Where(s =>  Stopwords.compareQuery(queryTokens, s.query)).OrderBy(s => s.rank).ToList<Suggestions>();
+                    IEnumerable<string> strippedData = data.Select(s => Helpers.MarkSuggestions(queryTokens, s.query) ).Reverse().Take(5);
+                    return Ok(new Response<IEnumerable<string>>(strippedData, "These are the generated queries"));
                 }
                 else
                 {
-                    return Ok(SearchService.DisplayResults(parameters.query.ToString()));
-                }
+                    //  note this should only be done if the query resulted in a fruitful response
+                    var data = searchifyContext.Suggestions.Where(a => a.query.ToLower() == parameters.query.ToLower()).FirstOrDefault();
+                    if (data == null)
+                    {
+                        Suggestions newSuggest = new Suggestions();
+                        newSuggest.id = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+                        newSuggest.query = parameters.query;
+                        newSuggest.rank = 1;
+                        searchifyContext.Suggestions.Add(newSuggest);
+                    }
+                    else
+                        data.rank += 1;
+                    }
+
+               searchifyContext.SaveChanges();
+                return Ok(SearchService.DisplayResults(parameters.query.ToString()));
+
             }
+            
             return BadRequest();
         }
     }

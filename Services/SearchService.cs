@@ -16,7 +16,7 @@ namespace Searchify.Services
             IEnumerable<SearchHit> data = Enumerable.Range(1, 10).Select((idx) =>
             {
                 Document doc = new Document();
-                return new SearchHit(doc, "this is the preview text for the book");
+                return new SearchHit(doc, query);
             });
 
             return new Response<IEnumerable<SearchHit>>(data, "These are the reponses for the query " + query);

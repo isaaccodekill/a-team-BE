@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.IO;
 using System.Reflection;
-using Microsoft.EntityFrameworkCore;
 
 namespace Searchify
 
