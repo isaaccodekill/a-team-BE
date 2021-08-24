@@ -481,6 +481,15 @@
           "lib/netstandard1.3/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll": {}
         }
       },
+      "RestSharp/106.12.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -2535,6 +2544,22 @@
         "lib/netstandard1.3/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll",
         "npgsql.entityframeworkcore.postgresql.design.1.1.0.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.design.nuspec"
+      ]
+    },
+    "RestSharp/106.12.0": {
+      "sha512": "irOsQHe5nTJB0BKxGQnTX1dsgCPl5dLTxvL7gbl98JiFPiHMN4wpFyUG/66ZpaFCsIrPKh6XwozWXlwYe9JwYQ==",
+      "type": "package",
+      "path": "restsharp/106.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.12.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -6224,6 +6249,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.9",
       "NpgSql.EntityFrameworkCore.PostgreSQL.Design >= 1.1.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 5.0.7",
+      "RestSharp >= 106.12.0",
       "Swashbuckle.AspNetCore >= 6.1.5",
       "Swashbuckle.AspNetCore.Newtonsoft >= 6.1.5",
       "Swashbuckle.AspNetCore.Swagger >= 6.1.5"
@@ -6235,11 +6261,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj",
+      "projectUniqueName": "C:\\Users\\Isaac Bello\\Documents\\school\\searchify-api\\Searchify.csproj",
       "projectName": "Searchify",
-      "projectPath": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj",
+      "projectPath": "C:\\Users\\Isaac Bello\\Documents\\school\\searchify-api\\Searchify.csproj",
       "packagesPath": "C:\\Users\\Isaac Bello\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\obj\\",
+      "outputPath": "C:\\Users\\Isaac Bello\\Documents\\school\\searchify-api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Isaac Bello\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6305,6 +6331,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[5.0.7, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[106.12.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

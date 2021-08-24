@@ -3,11 +3,9 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Searchify.Domain.Models;
 using Searchify.Domain.Utils;
 using Searchify.Services;
-using System.Text.Json;
 
 
 namespace Searchify.Controllers
@@ -39,7 +37,7 @@ namespace Searchify.Controllers
 
 
         [HttpGet("{id}")]
-        public ActionResult<Response<List<Document>>> Get(string id)
+        public ActionResult<Response<List<Document>>> Get(int id)
         {
             var data = searchifyContext.Documents.Where(a => a.id == id).FirstOrDefault();
             if (data == null) return NotFound();
@@ -59,17 +57,55 @@ namespace Searchify.Controllers
             {
                 data.white_listed = true;
                 data.black_listed = false;
-                data.id = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
                 searchifyContext.Add(data);
                 searchifyContext.SaveChanges();
-                return Ok(new Response<Document>(data, "document queued for indexing"));
+
+                var successfulIndexing = IndexingService.CallIndexer(data);
+                if (successfulIndexing)
+                {
+                    return Ok(new Response<Document>(data, "document queued for indexing"));
+                }
+                else
+                {
+                    searchifyContext.Remove(data);
+                    return BadRequest(new Response<Object>(new Object {}, "Failed to index please try again later"));
+                }
+                
+            }
+            return BadRequest();
+
+        }
+
+        [HttpPost("/api/search/batch-upload")]
+        public ActionResult<Response<Document>> Post(List<Document> data)
+        {
+            if (ModelState.IsValid)
+            {
+                for(var i = 0; i < data.Count(); i++)
+                {
+                    data[i].black_listed = false;
+                }
+                searchifyContext.AddRange(data);
+                searchifyContext.SaveChanges();
+                var successfulIndexing = IndexingService.CallIndexer(data);
+                if (successfulIndexing)
+                {
+                    return Ok(new Response<List<Document>>(data, "documents queued for re-indexing"));
+                }
+                else
+                {
+                    searchifyContext.RemoveRange(data);
+                    return BadRequest(new Response<Object>(new Object { }, "Failed to index please try again later"));
+                }
             }
             return BadRequest();
         }
 
 
+
+
         [HttpDelete("{id}")]
-        public IActionResult Delete(string id)
+        public IActionResult Delete(int id)
         {
 
             if (ModelState.IsValid)
@@ -87,7 +123,7 @@ namespace Searchify.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult update(string id, Document updatedDoc)
+        public IActionResult update(int id, Document updatedDoc)
         {
 
             if (ModelState.IsValid)
@@ -102,7 +138,18 @@ namespace Searchify.Controllers
                     data.white_listed = false;
                     data.black_listed = true;
                     searchifyContext.SaveChanges();
-                    return Ok(new Response<Document>(data, "sucessfully queued doc for re-indexing"));
+
+                    var successfulIndexing = IndexingService.CallIndexer(data);
+                    if (successfulIndexing)
+                    {
+                        return Ok(new Response<Document>(data, "document queued for re-indexing"));
+                    }
+                    else
+                    {
+                        searchifyContext.Remove(data);
+                        return BadRequest(new Response<Object>(new Object { }, "Failed to index please try again later"));
+                    }
+
                 }
             }
             return BadRequest();

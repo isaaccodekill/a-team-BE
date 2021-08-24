@@ -16,12 +16,14 @@ namespace Searchify.Migrations
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.9")
-                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
             modelBuilder.Entity("Searchify.Domain.Models.Document", b =>
                 {
-                    b.Property<string>("id")
-                        .HasColumnType("text");
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
                     b.Property<bool>("black_listed")
                         .HasColumnType("boolean");

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj": {}
+    "C:\\Users\\Isaac Bello\\Documents\\school\\searchify-api\\Searchify.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj": {
+    "C:\\Users\\Isaac Bello\\Documents\\school\\searchify-api\\Searchify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj",
+        "projectUniqueName": "C:\\Users\\Isaac Bello\\Documents\\school\\searchify-api\\Searchify.csproj",
         "projectName": "Searchify",
-        "projectPath": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj",
+        "projectPath": "C:\\Users\\Isaac Bello\\Documents\\school\\searchify-api\\Searchify.csproj",
         "packagesPath": "C:\\Users\\Isaac Bello\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\obj\\",
+        "outputPath": "C:\\Users\\Isaac Bello\\Documents\\school\\searchify-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Isaac Bello\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -77,6 +77,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.12.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

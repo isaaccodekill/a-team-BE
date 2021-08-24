@@ -12,5 +12,10 @@ namespace Searchify.Domain.Models
 
         public DbSet<Document> Documents { get; set; }
         public DbSet<Suggestions> Suggestions { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.UseSerialColumns();
+
+        }
     }
 }

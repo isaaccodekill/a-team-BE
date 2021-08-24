@@ -1,11 +1,11 @@
+using System;
 using System.Collections.Generic;
-using Searchify.Domain.Models;
 using System.IO;
 using System.Linq;
-using System.Text.Json;
-using Microsoft.Extensions.Logging;
-using System;
-
+using System.Net;
+using System.Reflection;
+using RestSharp;
+using System.Threading.Tasks;
 
 
 
@@ -13,21 +13,24 @@ namespace Searchify.Services
 {
     public class IndexingService
     {
-        private readonly ILogger<IndexingService> _logger;
+
+        private static IRestClient client = new RestClient("https://httpbin.org/");
+        private static IRestRequest request = new RestRequest("post", Method.POST);
 
 
-        public static void LogDocument(IEnumerable<Document> docs, TriggerQuery.TriggerType method)
-        {
+        public static bool CallIndexer(Object data){
 
-
-            var docsArray = docs.ToArray();
-
-            for (var i = 0; i < docsArray.Length; i++)
+            IRestResponse response =  client.Execute(request.AddJsonBody(data));
+            if (response.IsSuccessful)
             {
-                Console.WriteLine(docsArray[i].url);
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
         }
 
-    }
+    }    
 }

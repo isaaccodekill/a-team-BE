@@ -1,13 +1,15 @@
 using Newtonsoft.Json;
 
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Searchify.Domain.Models
 {
     public class Document
     {
 
-        public string id { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int id { get; set; }
 
         [JsonRequired]
         [JsonProperty("url")]

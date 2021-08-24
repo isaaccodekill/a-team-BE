@@ -9,8 +9,8 @@ using Searchify.Domain.Models;
 namespace Searchify.Migrations
 {
     [DbContext(typeof(SearchifyContext))]
-    [Migration("20210822140456_updated suggestion table")]
-    partial class updatedsuggestiontable
+    [Migration("20210824013429_created tables")]
+    partial class createdtables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -18,12 +18,14 @@ namespace Searchify.Migrations
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.9")
-                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
             modelBuilder.Entity("Searchify.Domain.Models.Document", b =>
                 {
-                    b.Property<string>("id")
-                        .HasColumnType("text");
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn);
 
                     b.Property<bool>("black_listed")
                         .HasColumnType("boolean");
@@ -47,11 +49,16 @@ namespace Searchify.Migrations
 
             modelBuilder.Entity("Searchify.Domain.Models.Suggestions", b =>
                 {
+                    b.Property<string>("id")
+                        .HasColumnType("text");
+
                     b.Property<string>("query")
                         .HasColumnType("text");
 
                     b.Property<int>("rank")
                         .HasColumnType("integer");
+
+                    b.HasKey("id");
 
                     b.ToTable("Suggestions");
                 });

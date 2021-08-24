@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4k3GEmdD+IF3fygx2AXxpSUuZdpnSJn0cHmizDIOpe8x0sBHSSPT48cSK4dBXZQr7ULnDu7bBmB0Z1ljP0V44g==",
+  "dgSpecHash": "9jKHacpPIRyAxMPE9zEIHMw51xIKLmLd2MFfjX+F2x0gW/WJPOq7xAU8VZfwE54weRo1XdsoC7bjO1Lb+WmhVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Isaac Bello\\source\\repos\\Searchify\\Searchify.csproj",
+  "projectFilePath": "C:\\Users\\Isaac Bello\\Documents\\school\\searchify-api\\Searchify.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Isaac Bello\\.nuget\\packages\\cronos\\0.7.1\\cronos.0.7.1.nupkg.sha512",
     "C:\\Users\\Isaac Bello\\.nuget\\packages\\devart.data\\5.0.2736\\devart.data.5.0.2736.nupkg.sha512",
@@ -40,6 +40,7 @@
     "C:\\Users\\Isaac Bello\\.nuget\\packages\\npgsql\\5.0.7\\npgsql.5.0.7.nupkg.sha512",
     "C:\\Users\\Isaac Bello\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.7\\npgsql.entityframeworkcore.postgresql.5.0.7.nupkg.sha512",
     "C:\\Users\\Isaac Bello\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql.design\\1.1.0\\npgsql.entityframeworkcore.postgresql.design.1.1.0.nupkg.sha512",
+    "C:\\Users\\Isaac Bello\\.nuget\\packages\\restsharp\\106.12.0\\restsharp.106.12.0.nupkg.sha512",
     "C:\\Users\\Isaac Bello\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Isaac Bello\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Isaac Bello\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
