@@ -82,12 +82,6 @@ namespace Searchify
 
             #endregion
 
-
-            services.AddCronJob<IndexCronJob>(c =>
-            {
-                c.TimeZoneInfo = TimeZoneInfo.Local;
-                c.CronExpression = @"* * * * *";
-            });
             services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing());
         }
 

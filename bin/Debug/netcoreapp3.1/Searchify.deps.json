@@ -31,13 +31,16 @@
     ".NETCoreApp,Version=v3.1": {
       "Searchify/1.0.0": {
         "dependencies": {
+          "AWSSDK.DynamoDBv2": "3.7.0.55",
           "Cronos": "0.7.1",
           "Devart.Data": "5.0.2736",
           "Devart.Data.PostgreSql": "7.20.1944",
+          "InvertedTomato.IntegerCompression": "3.0.0",
           "Json.Net": "1.0.33",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.2",
           "Microsoft.EntityFrameworkCore": "5.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.9",
+          "MoreComplexDataStructures": "1.9.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.7",
           "RestSharp": "106.12.0",
@@ -322,6 +325,31 @@
           "Searchify.dll": {}
         }
       },
+      "AWSSDK.Core/3.7.2.6": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.2.6"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.7.0.55": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.2.6"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.0.55"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {}
+        }
+      },
       "Cronos/0.7.1": {
         "runtime": {
           "lib/netstandard2.0/Cronos.dll": {
@@ -369,6 +397,17 @@
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
           }
+        }
+      },
+      "InvertedTomato.IntegerCompression/3.0.0": {
+        "runtime": {
+          "lib/netstandard1.0/InvertedTomato.IntegerCompression.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.0/InvertedTomato.IntegerCompression.dll": {}
         }
       },
       "Json.Net/1.0.33": {
@@ -646,6 +685,17 @@
         "dependencies": {
           "System.Security.AccessControl": "4.5.0",
           "System.Security.Principal.Windows": "4.5.0"
+        }
+      },
+      "MoreComplexDataStructures/1.9.1": {
+        "runtime": {
+          "lib/netstandard2.0/MoreComplexDataStructures.dll": {
+            "assemblyVersion": "1.9.1.0",
+            "fileVersion": "1.9.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MoreComplexDataStructures.dll": {}
         }
       },
       "NETStandard.Library/1.6.1": {
@@ -3182,6 +3232,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AWSSDK.Core/3.7.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5TfmNFJAue8FyCEMaswldFbHTrb02RevAy/PncfFcj5vey7v39v3Ee7IsEXuCsHNisBpveVHZBt0nz72Ujx3gQ==",
+      "path": "awssdk.core/3.7.2.6",
+      "hashPath": "awssdk.core.3.7.2.6.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.7.0.55": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-he/K66hvtq+h2MymK9TEfS25jDhYL5iotwIVVYG5as7STLJUGxrKVFSDPJ/9a7VEe8/NX17IOhdCPhpTkMbGbg==",
+      "path": "awssdk.dynamodbv2/3.7.0.55",
+      "hashPath": "awssdk.dynamodbv2.3.7.0.55.nupkg.sha512"
+    },
     "Cronos/0.7.1": {
       "type": "package",
       "serviceable": true,
@@ -3209,6 +3273,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "InvertedTomato.IntegerCompression/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z5lgmB3K9uO5yZkmZvlql+VvipX/tZbvfHbAiSr96OwkXQ5Kz7IVab2/M0b/kJiUwXNoVgqbx2NCgoOPvbGeVA==",
+      "path": "invertedtomato.integercompression/3.0.0",
+      "hashPath": "invertedtomato.integercompression.3.0.0.nupkg.sha512"
     },
     "Json.Net/1.0.33": {
       "type": "package",
@@ -3391,6 +3462,13 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "MoreComplexDataStructures/1.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r2itl/GtVMEai6yunA2N+nSB84jrTmFsD1Owm1igt5Ru8BJrsx2wGO4yxRG6Ycy+GuT8aHakrpDLhOx7cPsPRg==",
+      "path": "morecomplexdatastructures/1.9.1",
+      "hashPath": "morecomplexdatastructures.1.9.1.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

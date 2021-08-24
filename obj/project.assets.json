@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "AWSSDK.Core/3.7.2.6": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.7.0.55": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.7.2.6, 4.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {}
+        }
+      },
       "Cronos/0.7.1": {
         "type": "package",
         "compile": {
@@ -44,6 +65,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
+        }
+      },
+      "InvertedTomato.IntegerCompression/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/InvertedTomato.IntegerCompression.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/InvertedTomato.IntegerCompression.dll": {}
         }
       },
       "Json.Net/1.0.33": {
@@ -364,6 +394,15 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "MoreComplexDataStructures/1.9.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MoreComplexDataStructures.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MoreComplexDataStructures.dll": {}
         }
       },
       "NETStandard.Library/1.6.1": {
@@ -1808,6 +1847,58 @@
     }
   },
   "libraries": {
+    "AWSSDK.Core/3.7.2.6": {
+      "sha512": "5TfmNFJAue8FyCEMaswldFbHTrb02RevAy/PncfFcj5vey7v39v3Ee7IsEXuCsHNisBpveVHZBt0nz72Ujx3gQ==",
+      "type": "package",
+      "path": "awssdk.core/3.7.2.6",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.3.7.2.6.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "lib/net35/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.pdb",
+        "lib/net35/AWSSDK.Core.xml",
+        "lib/net45/AWSSDK.Core.dll",
+        "lib/net45/AWSSDK.Core.pdb",
+        "lib/net45/AWSSDK.Core.xml",
+        "lib/netcoreapp3.1/AWSSDK.Core.dll",
+        "lib/netcoreapp3.1/AWSSDK.Core.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.pdb",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "tools/account-management.ps1"
+      ]
+    },
+    "AWSSDK.DynamoDBv2/3.7.0.55": {
+      "sha512": "he/K66hvtq+h2MymK9TEfS25jDhYL5iotwIVVYG5as7STLJUGxrKVFSDPJ/9a7VEe8/NX17IOhdCPhpTkMbGbg==",
+      "type": "package",
+      "path": "awssdk.dynamodbv2/3.7.0.55",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.DynamoDBv2.CodeAnalysis.dll",
+        "awssdk.dynamodbv2.3.7.0.55.nupkg.sha512",
+        "awssdk.dynamodbv2.nuspec",
+        "lib/net35/AWSSDK.DynamoDBv2.dll",
+        "lib/net35/AWSSDK.DynamoDBv2.pdb",
+        "lib/net35/AWSSDK.DynamoDBv2.xml",
+        "lib/net45/AWSSDK.DynamoDBv2.dll",
+        "lib/net45/AWSSDK.DynamoDBv2.pdb",
+        "lib/net45/AWSSDK.DynamoDBv2.xml",
+        "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll",
+        "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.pdb",
+        "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.xml",
+        "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll",
+        "lib/netstandard2.0/AWSSDK.DynamoDBv2.pdb",
+        "lib/netstandard2.0/AWSSDK.DynamoDBv2.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Cronos/0.7.1": {
       "sha512": "aa2DY3qGBnwX7/jW4c17PyRlIeAtc5nYTlAPekc0113jcbBuz9vQkQaQ9NG+TNGlAj4esFxh8OuKUv4vmAODbw==",
       "type": "package",
@@ -1871,6 +1962,18 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "InvertedTomato.IntegerCompression/3.0.0": {
+      "sha512": "Z5lgmB3K9uO5yZkmZvlql+VvipX/tZbvfHbAiSr96OwkXQ5Kz7IVab2/M0b/kJiUwXNoVgqbx2NCgoOPvbGeVA==",
+      "type": "package",
+      "path": "invertedtomato.integercompression/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "invertedtomato.integercompression.3.0.0.nupkg.sha512",
+        "invertedtomato.integercompression.nuspec",
+        "lib/netstandard1.0/InvertedTomato.IntegerCompression.dll"
       ]
     },
     "Json.Net/1.0.33": {
@@ -2434,6 +2537,19 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MoreComplexDataStructures/1.9.1": {
+      "sha512": "r2itl/GtVMEai6yunA2N+nSB84jrTmFsD1Owm1igt5Ru8BJrsx2wGO4yxRG6Ycy+GuT8aHakrpDLhOx7cPsPRg==",
+      "type": "package",
+      "path": "morecomplexdatastructures/1.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/MoreComplexDataStructures.dll",
+        "lib/netstandard2.0/MoreComplexDataStructures.xml",
+        "morecomplexdatastructures.1.9.1.nupkg.sha512",
+        "morecomplexdatastructures.nuspec"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -6240,13 +6356,16 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "AWSSDK.DynamoDBv2 >= 3.7.0.55",
       "Cronos >= 0.7.1",
       "Devart.Data >= 5.0.2736",
       "Devart.Data.PostgreSql >= 7.20.1944",
+      "InvertedTomato.IntegerCompression >= 3.0.0",
       "Json.Net >= 1.0.33",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.2",
       "Microsoft.EntityFrameworkCore >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.9",
+      "MoreComplexDataStructures >= 1.9.1",
       "NpgSql.EntityFrameworkCore.PostgreSQL.Design >= 1.1.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 5.0.7",
       "RestSharp >= 106.12.0",
@@ -6294,6 +6413,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "AWSSDK.DynamoDBv2": {
+            "target": "Package",
+            "version": "[3.7.0.55, )"
+          },
           "Cronos": {
             "target": "Package",
             "version": "[0.7.1, )"
@@ -6305,6 +6428,10 @@
           "Devart.Data.PostgreSql": {
             "target": "Package",
             "version": "[7.20.1944, )"
+          },
+          "InvertedTomato.IntegerCompression": {
+            "target": "Package",
+            "version": "[3.0.0, )"
           },
           "Json.Net": {
             "target": "Package",
@@ -6323,6 +6450,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.9, )"
+          },
+          "MoreComplexDataStructures": {
+            "target": "Package",
+            "version": "[1.9.1, )"
           },
           "NpgSql.EntityFrameworkCore.PostgreSQL.Design": {
             "target": "Package",

@@ -125,3 +125,7 @@ C:\Users\Isaac Bello\Documents\school\searchify-api\obj\Debug\netcoreapp3.1\Sear
 C:\Users\Isaac Bello\Documents\school\searchify-api\obj\Debug\netcoreapp3.1\Searchify.pdb
 C:\Users\Isaac Bello\Documents\school\searchify-api\obj\Debug\netcoreapp3.1\Searchify.genruntimeconfig.cache
 C:\Users\Isaac Bello\Documents\school\searchify-api\bin\Debug\netcoreapp3.1\RestSharp.dll
+C:\Users\Isaac Bello\Documents\school\searchify-api\bin\Debug\netcoreapp3.1\AWSSDK.Core.dll
+C:\Users\Isaac Bello\Documents\school\searchify-api\bin\Debug\netcoreapp3.1\AWSSDK.DynamoDBv2.dll
+C:\Users\Isaac Bello\Documents\school\searchify-api\bin\Debug\netcoreapp3.1\InvertedTomato.IntegerCompression.dll
+C:\Users\Isaac Bello\Documents\school\searchify-api\bin\Debug\netcoreapp3.1\MoreComplexDataStructures.dll
