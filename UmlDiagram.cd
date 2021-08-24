@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Searchify.Program">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Startup">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Config">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAgAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Services.InvertedIndex.IndexTerm">
+    <Position X="14.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAACAAEAIAAAAAAAAAAAAAARAA=</HashCode>
+      <FileName>Services\InvertedIndex\IndexTerm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Services.InvertedIndex.Indexer">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAEAAIBAAAAJAAAAAAAA=</HashCode>
+      <FileName>Services\InvertedIndex\InvertedIndex.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Services.Ranker">
+    <Position X="13" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAgAAAAABAAAAAAAgAAABAAAAAAAAAA=</HashCode>
+      <FileName>Services\Ranker\Ranker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Services.IndexCronJob">
+    <Position X="4.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Services\ChronJob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Services.GenerateQueriesService">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Services\GenerateQueriesService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Services.IndexingService">
+    <Position X="12.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAIAAAAAAABAAAAAA=</HashCode>
+      <FileName>Services\IndexingService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Services.SearchService">
+    <Position X="10.25" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Services\SearchService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Services.Searcher.Pointer" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAAAJAAAA=</HashCode>
+      <FileName>Services\Searcher\Pointer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="Searchify.Services.Searcher.Searcher">
+    <Position X="7.25" Y="8.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAEAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Services\Searcher\Searcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CronJobService">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAACQgAAAAAAiAAAAAAAAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Services\ChronService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.492" />
+  </Class>
+  <Class Name="ScheduleConfig&lt;T&gt;" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ChronService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.308" Collapsed="true" />
+  </Class>
+  <Class Name="Searchify.DynamoDb.Models.InvertedIndexModel">
+    <Position X="5.75" Y="12" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAABAAEA=</HashCode>
+      <FileName>DynamoDb\Models\InvertedIndexModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.DynamoDb.DbClient">
+    <Position X="3" Y="12" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAKAFQCAAAAABAAAAAAAQ=</HashCode>
+      <FileName>DynamoDb\DbClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Models.Document">
+    <Position X="3" Y="22" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAEAAAAAAAAAAAAAAAAAMAAQAAAAAAAAAAgA=</HashCode>
+      <FileName>Domain\Models\Document.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Models.SearchifyContext" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAEAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Models\DocumentContext.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Searchify.Domain.Models.SearchHit">
+    <Position X="13" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAEA=</HashCode>
+      <FileName>Domain\Models\SearchHit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Models.SearchQuery">
+    <Position X="8.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Domain\Models\SearchQuery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Models.Suggestions">
+    <Position X="0.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAgA=</HashCode>
+      <FileName>Domain\Models\Suggestions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Models.TriggerQuery">
+    <Position X="8.25" Y="18.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Searchify.Domain.Models.TriggerQuery.TriggerType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Domain\Models\TriggerQuery.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Models\TriggerQuery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Utils.Helpers">
+    <Position X="9" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Utils\Helpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Utils.Response&lt;T&gt;">
+    <Position X="11" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACA=</HashCode>
+      <FileName>Domain\Utils\Response.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Utils.Stemmer">
+    <Position X="10.5" Y="17" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIBAAAACAACgAAgAAABAIARAAACBEAAAKAABAIAAA=</HashCode>
+      <FileName>Domain\Utils\Stemmer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Utils.Stopwords">
+    <Position X="13.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQAg=</HashCode>
+      <FileName>Domain\Utils\StopWords.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Utils.Tokenizer">
+    <Position X="13.75" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAIAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Utils\Tokenizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Domain.Utils.Utils">
+    <Position X="13.5" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Domain\Utils\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScheduledServiceExtensions">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ChronService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Controllers.DocumentController" Collapsed="true">
+    <Position X="26.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAKAEAAAAAAgAAAIAEAAA=</HashCode>
+      <FileName>Controllers\DocumentsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searchify.Controllers.SearchController">
+    <Position X="24.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAABAAAAAAAAAIAAAAAAAAAAAAIAAAAQ=</HashCode>
+      <FileName>Controllers\SearchController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Mvc.ControllerBase" Collapsed="true">
+    <Position X="24.5" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="IScheduleConfig&lt;T&gt;">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ChronService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Searchify.Domain.Models.ISearchifyContext">
+    <Position X="1" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Models\ISearchifyContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
