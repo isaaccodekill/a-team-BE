@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Searchify.Services.Searcher;
 using Searchify.Services.InvertedIndex;
 using System.Diagnostics;
+using Searchify.DynamoDb.Models;
 
 namespace Searchify.Controllers
 {
@@ -21,14 +22,23 @@ namespace Searchify.Controllers
 
         private readonly SearchifyContext searchifyContext;
         private readonly ILogger<SearchController> _logger;
-        private readonly Indexer indexer;
         private readonly Searcher _searcher;
         public SearchController(SearchifyContext context, ILogger<SearchController> logger)
         {
             searchifyContext = context;
             _logger = logger;
-            _searcher = new Searcher(indexer);
+            Indexer index = Task.Run(async () =>{
+                return await LoadIndexer();
+            }).GetAwaiter().GetResult();
+
+            _searcher = new Searcher(index);
         }
+
+        private async Task<Indexer> LoadIndexer (){
+            uint lastId = await InvertedIndexModel.GetLastId();
+            return  new Indexer(lastId);
+        }
+
 
         [HttpGet]
         public IActionResult Get([FromQuery]SearchQuery parameters)
