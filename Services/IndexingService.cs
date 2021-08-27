@@ -6,6 +6,7 @@ using System.Net;
 using System.Reflection;
 using RestSharp;
 using System.Threading.Tasks;
+using System;
 
 
 
@@ -14,7 +15,7 @@ namespace Searchify.Services
     public class IndexingService
     {
 
-        private static IRestClient client = new RestClient("https://httpbin.org/");
+        private static IRestClient client = new RestClient(Environment.GetEnvironmentVariable("INDEXER_URL"));
         private static IRestRequest request = new RestRequest("post", Method.POST);
 
 

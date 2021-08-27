@@ -45,7 +45,7 @@ namespace Searchify
                 }else
                 {
                     // Use connection string provided at runtime by Heroku.
-                    var connUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+                    var connUrl = Environment.GetEnvironmentVariable("POSTGRESS_DATABASE_URL");
                     Console.WriteLine(connUrl, "the connection url");
                     // Parse connection URL to connection string for Npgsql
                     connUrl = connUrl.Replace("postgres://", string.Empty);

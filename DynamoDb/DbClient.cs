@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
 using Searchify.DynamoDb.Models;
+using Amazon.Runtime.CredentialManagement;
 
 namespace Searchify.DynamoDb
 {
@@ -32,8 +33,22 @@ namespace Searchify.DynamoDb
             return true;
         }
 
+        private static void WriteProfile(string profileName)
+        {
+            var options = new CredentialProfileOptions
+            {
+                AccessKey = Environment.GetEnvironmentVariable("AWS_ACCESS_KEY") ?? "null",
+                SecretKey = Environment.GetEnvironmentVariable("AWS_SECRET_KEY") ?? "null"
+            };
+            var profile = new CredentialProfile(profileName, options);
+            var sharedFile = new SharedCredentialsFile();
+            sharedFile.RegisterProfile(profile);
+        }
+
+
         public static bool CreateClient(bool useLocal)
         {
+            WriteProfile("default");
             if (useLocal)
             {
                 var portUsed = IsPortInUse();

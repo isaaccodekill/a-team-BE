@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Searchify.DynamoDb;
 using System.Threading.Tasks;
+using System;
 
 namespace Searchify
 {
@@ -18,7 +19,15 @@ namespace Searchify
 
         static async Task MainAsync(string[] args)
         {
-            DbClient.CreateClient(true);
+            string env = Environment.GetEnvironmentVariable("NET_ENV") ?? "Development";
+                if (env  == "Development")
+                {
+                    DbClient.CreateClient(true);
+                }
+                else
+                {
+                    DbClient.CreateClient(false);
+                }
             await DbClient.CreateTables();
 
         }
