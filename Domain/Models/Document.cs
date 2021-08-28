@@ -9,7 +9,7 @@ namespace Searchify.Domain.Models
 
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public uint id { get; set; }
+        public int id { get; set; }
 
         [JsonRequired]
         [JsonProperty("url")]

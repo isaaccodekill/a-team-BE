@@ -64,7 +64,7 @@ namespace Searchify.Controllers
                     var fileIds = _searcher.ExecuteQuery(parameters.query).ToList();
                     stopwatch.Stop();
 
-                    List<Document> responsedata = searchifyContext.Documents.Where(a => fileIds.Contains(a.id)).ToList();
+                    List<Document> responsedata = searchifyContext.Documents.Where(a => fileIds.Contains(Convert.ToUInt32(a.id))).ToList();
 
 
                     //  note this should only be done if the query resulted in a fruitful response

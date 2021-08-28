@@ -19,7 +19,7 @@ namespace Searchify.Services
 
 
         public static bool CallIndexer(Object data){
-
+            Console.WriteLine("data", data.ToString());
             IRestResponse response =  client.Execute(request.AddJsonBody(data));
             if (response.IsSuccessful)
             {

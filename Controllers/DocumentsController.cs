@@ -57,6 +57,7 @@ namespace Searchify.Controllers
             {
                 data.white_listed = true;
                 data.black_listed = false;
+                Console.WriteLine(data);
                 searchifyContext.Add(data);
                 searchifyContext.SaveChanges();
 
