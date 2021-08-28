@@ -1,22 +1,30 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS base
-WORKDIR /app
-EXPOSE 5000
-ENV ASPNETCORE_URLS=http://*:5000
-
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+
 WORKDIR /src
+
 COPY ["Searchify.csproj", "./"]
-RUN dotnet restore "./Searchify.csproj"
+
+RUN dotnet restore --disable-parallel "./Searchify.csproj"
+
 COPY . .
+
 WORKDIR /src/.
+
 RUN dotnet build "Searchify.csproj" -c Release -o /app/build
 
-FROM build AS publish
 RUN dotnet publish "Searchify.csproj" -c Release -o /app/publish
 
-FROM base AS final
+
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS final
+
+ENV ASPNETCORE_URLS=http://0.0.0.0:5000
+
 WORKDIR /app
-COPY --from=publish /app/publish .
+
+COPY --from=build /app/publish .
+
+EXPOSE 5000
+
 ENTRYPOINT [ "dotnet", "Searchify.dll"]
 
 
