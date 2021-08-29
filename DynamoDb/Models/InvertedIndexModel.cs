@@ -22,7 +22,15 @@ namespace Searchify.DynamoDb.Models
             GetItemResponse response;
             response = await DbClient.Client.GetItemAsync(request);
             Dictionary<string, AttributeValue> item = response.Item;
-            return UInt32.Parse(item["id"].N);
+            try
+            {
+                return UInt32.Parse(item["id"].N);
+
+            }
+            catch (KeyNotFoundException e)
+            {
+                return 0;
+            }
         }
 
         public static async Task<PutItemResponse> SetLastId(uint lastId)

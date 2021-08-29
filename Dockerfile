@@ -17,7 +17,7 @@ RUN dotnet publish "Searchify.csproj" -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS final
 
-ENV ASPNETCORE_URLS=http://0.0.0.0:5000
+ENV ASPNETCORE_URLS=http://+:5000
 
 WORKDIR /app
 

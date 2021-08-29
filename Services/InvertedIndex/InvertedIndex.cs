@@ -23,12 +23,19 @@ namespace Searchify.Services.InvertedIndex
 
         public async Task LoadInvertedIndex(string[] queryTerms)
         {
+            LastId = await InvertedIndexModel.GetLastId();
+
             await Task.WhenAll(queryTerms.Select(async t =>
             {
                 IndexTerm[] terms = await GetIndexTermArray(t);
                 ReverseIndex.Add(t, terms);
                 return terms;
             }));
+        }
+
+        public void ClearInvertedIndex()
+        {
+            ReverseIndex = new Dictionary<string, IndexTerm[]>();
         }
 
         public IndexTerm[] GetLoadedTermList(string term)

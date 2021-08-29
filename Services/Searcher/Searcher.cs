@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using MoreComplexDataStructures;
 using Searchify.Services.InvertedIndex;
 using Searchify.Domain.Utils;
+using Searchify.DynamoDb.Models;
 
 namespace Searchify.Services.Searcher
 {
@@ -29,33 +31,44 @@ namespace Searchify.Services.Searcher
         /// </summary>
         /// <param name="query">any nonempty string value</param>
         /// <returns>Ranked array of file ids</returns>
-        public uint[] ExecuteQuery(string query)
+        public async Task<uint[]> ExecuteQuery(string query)
         {
             string[] queryTerms = Tokenizer.Tokenize(query);
             MinHeap<Pointer> heap = new MinHeap<Pointer>();
+            
+            await _indexer.LoadInvertedIndex(queryTerms);
 
             // initialize pq
             foreach (var term in queryTerms)
             {
-                heap.Insert(new Pointer(term, 0, _indexer.GetLoadedTermList(term)[0].FileDelta));
+                try
+                {
+                    heap.Insert(new Pointer(term, 0, _indexer.GetLoadedTermList(term)[0].FileDelta));
+                }
+                catch (IndexOutOfRangeException)
+                {
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                }
             }
-
+            
             while (heap.Count > 0)
             {
                 // peek smallest id
                 uint minFileId = heap.Peek().FileId;
-
+            
                 List<Pointer> currP = new List<Pointer>();
-
+            
                 // pop all pointers to id
                 while (heap.Count > 0 && heap.Peek().FileId == minFileId)
                 {
                     currP.Add(heap.ExtractMin());
                 }
-
+            
                 // score
                 _ranker.Score(minFileId, currP);
-
+            
                 // increment pointers and file ids and deltas
                 foreach (var pointer in currP)
                 {
@@ -73,8 +86,10 @@ namespace Searchify.Services.Searcher
                     }
                 }
             }
-
+            
             uint[] resultFileIds = _ranker.RankedResultsList();
+            _indexer.ClearInvertedIndex();
+            _ranker.ClearScores();
             return resultFileIds;
         }
     }

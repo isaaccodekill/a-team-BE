@@ -138,11 +138,6 @@ namespace Searchify.DynamoDb
                 ReadCapacityUnits = 20,
                 WriteCapacityUnits = 50
             });
-
-            if (status)
-            {
-                await InvertedIndexModel.SetLastId(0);
-            }
         }
 
         public static async Task<TableDescription> GetTableDescription(string tableName)

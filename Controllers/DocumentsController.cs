@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Searchify.Domain.Models;
 using Searchify.Domain.Utils;
 using Searchify.Services;
@@ -61,7 +62,8 @@ namespace Searchify.Controllers
                 searchifyContext.Add(data);
                 searchifyContext.SaveChanges();
 
-                var successfulIndexing = IndexingService.CallIndexer(data);
+                bool successfulIndexing = Task.Run(async () => await IndexingService.Index(data)).GetAwaiter().GetResult();
+                
                 if (successfulIndexing)
                 {
                     return Ok(new Response<Document>(data, "document queued for indexing"));
@@ -88,7 +90,9 @@ namespace Searchify.Controllers
                 }
                 searchifyContext.AddRange(data);
                 searchifyContext.SaveChanges();
-                var successfulIndexing = IndexingService.CallIndexer(data);
+                
+                var successfulIndexing = Task.Run(async () =>  await IndexingService.IndexMany(data)).GetAwaiter().GetResult();
+                
                 if (successfulIndexing)
                 {
                     return Ok(new Response<List<Document>>(data, "documents queued for re-indexing"));
@@ -140,7 +144,8 @@ namespace Searchify.Controllers
                     data.black_listed = true;
                     searchifyContext.SaveChanges();
 
-                    var successfulIndexing = IndexingService.CallIndexer(data);
+                    bool successfulIndexing = Task.Run(async () => await IndexingService.Index(data)).GetAwaiter().GetResult();
+
                     if (successfulIndexing)
                     {
                         return Ok(new Response<Document>(data, "document queued for re-indexing"));

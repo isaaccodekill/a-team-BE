@@ -36,6 +36,7 @@ namespace Searchify.Controllers
 
         private async Task<Indexer> LoadIndexer (){
             uint lastId = await InvertedIndexModel.GetLastId();
+            Console.WriteLine("lastid" + lastId);
             return  new Indexer(lastId);
         }
 
@@ -61,10 +62,11 @@ namespace Searchify.Controllers
 
                     var stopwatch = new Stopwatch();
                     stopwatch.Start();
-                    var fileIds = _searcher.ExecuteQuery(parameters.query).ToList();
+                    uint[] fileIdArray = Task.Run(async () => await _searcher.ExecuteQuery(parameters.query)).GetAwaiter().GetResult();
+                    var fileIdsInts = fileIdArray.ToList().ConvertAll<int>(x => (int) x);
                     stopwatch.Stop();
 
-                    List<Document> responsedata = searchifyContext.Documents.Where(a => fileIds.Contains(Convert.ToUInt32(a.id))).ToList();
+                    List<Document> responsedata = searchifyContext.Documents.Where(a => fileIdsInts.Contains(a.id)).ToList();
 
 
                     //  note this should only be done if the query resulted in a fruitful response

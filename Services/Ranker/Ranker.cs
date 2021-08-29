@@ -53,6 +53,11 @@ namespace Searchify.Services
                 .ToArray();
         }
 
+        public void ClearScores()
+        {
+            _scores = new Dictionary<uint, double>();
+        }
+
         // TF IDF Scoring
         private void _tfIdfScore(uint fileId, List<Pointer> pointerList)
         {
@@ -65,9 +70,15 @@ namespace Searchify.Services
             {   
                 // normalized term frquency: number of occurences of term in document
                 double tf = _indexer.GetLoadedTermList(pointer.Term)[pointer.P].Frequency;
+                
+                Console.WriteLine(tf);
+                
                 //
                 uint currentPos = 0;
                 uint[] pos = _indexer.GetLoadedTermList(pointer.Term)[pointer.P].Positions;
+                
+                // Console.WriteLine(string.Join(' ', pos));
+                
                 foreach (var posi in pos)
                 {
                     currentPos += posi;
@@ -79,6 +90,10 @@ namespace Searchify.Services
                 // N : total number of documents
                 // df(t): total number of documents that have term t
                 double idf = Math.Log(_indexer.LastId / (double)_indexer.GetLoadedTermList(pointer.Term).Length, 2);
+                
+                Console.WriteLine(idf);
+                Console.WriteLine((double)_indexer.GetLoadedTermList(pointer.Term).Length);
+                Console.WriteLine(_indexer.LastId);
 
                 total += tf * idf;
             }
