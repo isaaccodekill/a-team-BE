@@ -1,0 +1,572 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Isaac Bello/Documents/Work/searchi/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Config.html",
+          "hash": "IMjOWvf43EYn+O4VbpMUMv9pRHKLT/4F0BtHOvSaVDo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Controllers.DocumentController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Controllers.DocumentController.html",
+          "hash": "QY2YSYkl/yNm1icFmysy+uuC0s6AUXG8MkPMUxP9O00="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Controllers.SearchController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Controllers.SearchController.html",
+          "hash": "jQVkbdx2f3/kBgvOc/SFgiGqRs54ym4EW4LCoowDskY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Controllers.html",
+          "hash": "dYh7a/2OJPFIkfed5KoS5XiuO3z+QTJB8EVenuBMj2k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Models.Document.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Models.Document.html",
+          "hash": "Brjtt+6K7294pPaeQDHLgQ+3iQiXSkrjHBzADHqtKcU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Models.ISearchifyContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Models.ISearchifyContext.html",
+          "hash": "qKv1JrInLf7JCQNcLxUGtCQoPcuxGgz8ULs7If3hRYk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Models.SearchHit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Models.SearchHit.html",
+          "hash": "55khvCv8615yUSoK9sdGlt9J+NJilITqUn+EQuUsQRE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Models.SearchQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Models.SearchQuery.html",
+          "hash": "cN3Kn9JKAtRejpKpIVqoQfOgnAgT5gzTVX8Zk0LB+Xg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Models.SearchifyContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Models.SearchifyContext.html",
+          "hash": "QAdd5CNZAIJo9Tm1eLg1X931T5+SriJL0nIoFxdYspo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Models.Suggestions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Models.Suggestions.html",
+          "hash": "e/4lMeCTrHxFU/L+kkPay2jRqMG0NpoeKG5s4oVJG1Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Models.html",
+          "hash": "xffp7IA5iuCn8gjAwTpjlRI2squCyLBp2MBDi8UmbVM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Utils.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Utils.Helpers.html",
+          "hash": "4Uphql8ruSI8N3pl0SdydFwzKC3V7ZNkiHXVqgbo5WM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Utils.Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Utils.Response-1.html",
+          "hash": "rbWc/S6NB3n+ExpKzMghCvkVT6okA4TDZQyAP9/YC14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Utils.Stemmer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Utils.Stemmer.html",
+          "hash": "aWxM8JINUwkBdY3GxvPK63l56YCWsM3Aq/lItm9Mftk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Utils.Stopwords.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Utils.Stopwords.html",
+          "hash": "se08qeCNz5lRWwQci7GlVANEBy88IhqlMErY0yamAmQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Utils.Tokenizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Utils.Tokenizer.html",
+          "hash": "j2g/8K9ti63JsAyE4zF/brtkm04KkJqcFv0r+1qJgMA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Utils.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Utils.Utils.html",
+          "hash": "uwLcYrgH7DVytheLPNi37loVSvSCCJbMW1sUDjgLkKg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Domain.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Domain.Utils.html",
+          "hash": "xyDyaJ7Gp101rEKj/VlSxFiqZVgS6Ciwxoq0Dk7Ztw0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.DynamoDb.DbClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.DynamoDb.DbClient.html",
+          "hash": "ckNKnssbW0ResbZuhAQwAd0BFbR7eG8zUP6145To7cc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.DynamoDb.Models.InvertedIndexModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.DynamoDb.Models.InvertedIndexModel.html",
+          "hash": "gqRC2eqXqEaf22k1ivtHRB8R/LW4oZwrfRoNMU94qto="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.DynamoDb.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.DynamoDb.Models.html",
+          "hash": "R0MtdapqCcqH38SN5OWm1obdfWiVgSRRvBJP/p/HVtA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.DynamoDb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.DynamoDb.html",
+          "hash": "Rm6x+JJoaYGfQL2uiDFjZ9OihIT1yVQyaHjKjdcL/No="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Migrations.changeddocidtype.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Migrations.changeddocidtype.html",
+          "hash": "9kr/iCzBhBavWtvo3inBwtS4+/2/uLzFZF8qbCYDxoI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Migrations.createdtables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Migrations.createdtables.html",
+          "hash": "eF+MIjH3R+1vSVD7FGNJ7Jmo5VXXOYaygVMQbu95ywY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Migrations.extenddocidtype.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Migrations.extenddocidtype.html",
+          "hash": "iad5pcjYr17lENm2RWmHahvX+PR4PwAWn/NTx8+Gzxk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Migrations.html",
+          "hash": "vLP/82DqdFBk2VlMqmKX0Ktmhpp0NPlsci62PnE7fQw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Program.html",
+          "hash": "AUIKzBVUUu/pHHCvyBdDFU1gKMc/Is3wKZ0z1y/Kz9g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.IndexerDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.IndexerDocument.html",
+          "hash": "oLZwBIY7uP4NeR+z8nCag8KDgpYDc5ciE0cq4Zq5j7w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.IndexingService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.IndexingService.html",
+          "hash": "nTefECzPvY8d7AB5v7YBqM/HDXOIyCly4XXpRfHSTjI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.InvertedIndex.IndexTerm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.InvertedIndex.IndexTerm.html",
+          "hash": "tetuPl+CaT9saqTYnKwtOopUEfoM1mm2FDTmUn9xy+0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.InvertedIndex.Indexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.InvertedIndex.Indexer.html",
+          "hash": "onstcImBibq0gryCJloWacCa0JERVg1dUR14WJXdh6M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.InvertedIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.InvertedIndex.html",
+          "hash": "vXMQBBqxGOgeYQT5akfRZQkgW6kLnzzF1Zol8aqIJYs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.Ranker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.Ranker.html",
+          "hash": "5Gr7XS2EBvFrpa/xJASqTR3fdXtrDULyLDtU8NAwpnI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.Searcher.Pointer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.Searcher.Pointer.html",
+          "hash": "GY7M3rF9WrVj4OciMNpneN05hm/AGhMA0CFegHOUPeQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.Searcher.Searcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.Searcher.Searcher.html",
+          "hash": "35TYx6F22tIXvfnBr5GC7wHNmYoi6slHVg0o8XiNnsA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.Searcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.Searcher.html",
+          "hash": "CHwOh0HsrltiXGpm7bKwfweUplBBocMaZ1V/R2wkM7c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Services.html",
+          "hash": "f184Fd1Ykw5I4K0CF35XpvziArvfnAljoSDGjFixj+s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.Startup.html",
+          "hash": "49+CyMTEKSfzUYboBrD5GCt1Q8myL+zm+f7ABCtsSpU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Searchify.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Searchify.html",
+          "hash": "8TdUNb8cKsUDo4Q7lriXrVE3Z7wy5l6OcYaM6FhYYJQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "uBpgcMgaS6zouqksmiQdDtXO485vVLq4ROkZdqDaHog="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "wKi7CzTATAaJp0OAsw2oFlzktX76sIB99ztB3kFbVJQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "21ke/1gW+PtxwYX/oFC8hAqEwqb9MlINU8EPzpS2VpQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "7/CeUb3SscDQqOTs3LG9baHhGFmGKe06HRz0C+mzuO4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 39,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
