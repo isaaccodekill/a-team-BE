@@ -11,6 +11,11 @@ using Searchify.Services;
 
 namespace Searchify.Controllers
 {
+
+    /// <summary>
+    /// Document controller class 
+    /// </summary>
+
     [ApiController]
     [Route("/api/docs")]
     public class DocumentController : ControllerBase
@@ -18,13 +23,18 @@ namespace Searchify.Controllers
 
         private readonly SearchifyContext searchifyContext;
 
-        private readonly ILogger<DocumentController> _logger;
 
-        public DocumentController(SearchifyContext context,  ILogger<DocumentController> logger)
+        public DocumentController(SearchifyContext context)
         {
             searchifyContext = context;
-            _logger = logger;
         }
+
+        /// <summary>
+        /// Handles Api request to get all documents
+        /// </summary>
+        /// <returns>
+        ///   A Response instance Containing a List of Documents <see cref="Document"/> and <see cref="Response{T}"/>
+        /// </returns>
 
         [HttpGet]
         public  ActionResult<Response<List<Document>>> GetAll()
@@ -36,6 +46,13 @@ namespace Searchify.Controllers
         }
 
 
+        /// <summary>
+        /// Controler method that returns information about a single book
+        /// </summary>
+        /// <param name="id"> Book id passed from the request url </param>
+        /// <returns>
+        ///   A Response instance Containing a Document <see cref="Document"/> and <see cref="Response{T}"/>
+        /// </returns>
 
         [HttpGet("{id}")]
         public ActionResult<Response<List<Document>>> Get(int id)
@@ -49,6 +66,13 @@ namespace Searchify.Controllers
         }
 
 
+        /// <summary>
+        /// Controler method that created a Document
+        /// </summary>
+        /// <param name="data"> JSon data to create the book from </param>
+        /// <returns>
+        ///   A Response instance Containing created Document <see cref="Document"/> and <see cref="Response{T}"/>
+        /// </returns>
 
         [HttpPost]
         public ActionResult<Response<Document>> Post(Document data)
@@ -62,7 +86,7 @@ namespace Searchify.Controllers
                 searchifyContext.Add(data);
                 searchifyContext.SaveChanges();
 
-                bool successfulIndexing = Task.Run(async () => await IndexingService.Index(data)).GetAwaiter().GetResult();
+                bool successfulIndexing = Task.Run(async () => await IndexingService.Index(data, "")).GetAwaiter().GetResult();
                 
                 if (successfulIndexing)
                 {
@@ -78,7 +102,13 @@ namespace Searchify.Controllers
             return BadRequest();
 
         }
-
+        /// <summary>
+        /// Controler method that allows mutliple document update
+        /// </summary>
+        /// <param name="data"> List of Documents </param>
+        /// <returns>
+        ///   A Response instance Containing a Documents <see cref="Document"/> and <see cref="Response{T}"/>
+        /// </returns>
         [HttpPost("/api/search/batch-upload")]
         public ActionResult<Response<Document>> Post(List<Document> data)
         {
@@ -107,10 +137,16 @@ namespace Searchify.Controllers
         }
 
 
-
+        /// <summary>
+        /// Controler method that deletes a book with id passed in request url
+        /// </summary>
+        /// <param name="id"> Id of the document to be deleted </param>
+        /// <returns>
+        ///   A Response instance containing deleted document <see cref="Document"/> and <see cref="Response{T}"/>
+        /// </returns>
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public ActionResult<Response<Document>> Delete(int id)
         {
 
             if (ModelState.IsValid)
@@ -126,6 +162,16 @@ namespace Searchify.Controllers
             }
             return BadRequest();
         }
+
+
+        /// <summary>
+        /// Controler method that updates a book with id passed in request url
+        /// </summary>
+        /// <param name="id"> Id of the document to be updates </param>
+        /// <returns>
+        ///   A Response instance containing updated document <see cref="Document"/> and <see cref="Response{T}"/>
+        /// </returns>
+
 
         [HttpPut("{id}")]
         public IActionResult update(int id, Document updatedDoc)
@@ -144,7 +190,7 @@ namespace Searchify.Controllers
                     data.black_listed = true;
                     searchifyContext.SaveChanges();
 
-                    bool successfulIndexing = Task.Run(async () => await IndexingService.Index(data)).GetAwaiter().GetResult();
+                    bool successfulIndexing = Task.Run(async () => await IndexingService.Index(data, "")).GetAwaiter().GetResult();
 
                     if (successfulIndexing)
                     {

@@ -15,23 +15,33 @@ using Searchify.DynamoDb.Models;
 
 namespace Searchify.Controllers
 {
+
+    /// <summary>
+    /// Search controller class 
+    /// </summary>
     [ApiController]
     [Route("/api/search")]
     public class SearchController : ControllerBase
     {
 
         private readonly SearchifyContext searchifyContext;
-        private readonly ILogger<SearchController> _logger;
         private readonly Searcher _searcher;
-        public SearchController(SearchifyContext context, ILogger<SearchController> logger)
+
+        /// <summary>
+        /// Search controller initializer
+        /// </summary>
+        public SearchController(SearchifyContext context, bool testMode)
         {
             searchifyContext = context;
-            _logger = logger;
-            Indexer index = Task.Run(async () =>{
-                return await LoadIndexer();
-            }).GetAwaiter().GetResult();
+            if (!testMode)
+            {
+                Indexer index = Task.Run(async () => {
+                    return await LoadIndexer();
+                }).GetAwaiter().GetResult();
 
-            _searcher = new Searcher(index);
+                _searcher = new Searcher(index);
+            }
+
         }
 
         private async Task<Indexer> LoadIndexer (){
@@ -40,9 +50,13 @@ namespace Searchify.Controllers
             return  new Indexer(lastId);
         }
 
-
+        /// <summary>
+        /// Method that handles search request, takes in query and run it against 
+        /// </summary>
+        /// <param name="parameters"> query string, autosuggestions bool </param>
+        /// <returns> Response with list of matching documents </returns>
         [HttpGet]
-        public IActionResult Get([FromQuery]SearchQuery parameters)
+        public ActionResult<List<Object>> Get([FromQuery]SearchQuery parameters)
         {
             if (ModelState.IsValid)
             {
@@ -50,10 +64,10 @@ namespace Searchify.Controllers
                 {
 
                     List<string> queryTokens = Stopwords.Clean(parameters.query);
-
+                    
                     var data = searchifyContext.Suggestions.ToList().Where(s => Stopwords.compareQuery(queryTokens, s.query)).OrderBy(s => s.rank).ToList<Suggestions>();
                     IEnumerable<string> strippedData = data.Select(s => Helpers.MarkSuggestions(queryTokens, s.query)).Reverse().Take(5);
-                    return Ok(new Response<IEnumerable<string>>(strippedData, "These are the generated queries"));
+                    return Ok(new Response<List<string>>(strippedData.ToList(), "These are the generated queries"));
                 }
                 else
                 {

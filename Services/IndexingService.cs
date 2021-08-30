@@ -26,20 +26,30 @@ namespace Searchify.Services
         public string Url;
     }
     
+    /// <summary>
+    /// Class that handles the relaying to uploaded documents to indexing service
+    /// </summary>
     public class IndexingService
     {
         
         private static HttpClient _client = new HttpClient();
 
-
-        public static async Task<bool> Index(Document data){
+        /// <summary>
+        /// Static method that relays multiple books to the indexing service
+        /// </summary>
+        /// <param name="data">Document to be indexed</param>
+        /// <returns> A boolean promise that determines if the relaying of documents was succesfull</returns>
+        public static async Task<bool> Index(Document data, string urlString){
             Console.WriteLine("data", data.ToString()); 
             IndexerDocument[] documentPayload = new IndexerDocument[1];
             documentPayload[0] = new IndexerDocument { Id = (uint)data.id, Url = data.url };
 
+
+
+
             var request = new HttpRequestMessage()
             {
-                RequestUri = new Uri(Environment.GetEnvironmentVariable("INDEXER_URL")),
+                RequestUri =  urlString != String.Empty ? new Uri(urlString) :  new Uri(Environment.GetEnvironmentVariable("INDEXER_URL")),
                 Method = HttpMethod.Post,
                 Content = new StringContent(JsonConvert.SerializeObject(documentPayload), Encoding.UTF8, "application/json")
             };
@@ -58,7 +68,11 @@ namespace Searchify.Services
 
             return false;
         }
-
+        /// <summary>
+        /// Static method that relays multiple books to the indexing service
+        /// </summary>
+        /// <param name="data"> List of documents to be indexed </param>
+        /// <returns> A boolean promise that determines if the relaying of documents was succesfull </returns>
         public static async Task<bool> IndexMany(List<Document> data)
         {
             Console.WriteLine("data", data.ToString());
